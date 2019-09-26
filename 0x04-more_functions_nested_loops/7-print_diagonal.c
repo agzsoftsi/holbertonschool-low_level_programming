@@ -9,7 +9,7 @@ int x;
 int y;
 if (n > 0)
 {
-for (x = 0; x <= n; x++)
+for (x = 0; x < n; x++)
 {
 for (y = 0; y <= n; y++)
 {
