@@ -16,13 +16,14 @@ for (y = 0; y <= n; y++)
 if (x == y)
 {
 _putchar ('\\');
+break;
 }
 else
 {
-_putchar(' ');
+_putchar (' ');
 }
 }
-_putchar('\n');
+_putchar ('\n');
 }
 }
 else
