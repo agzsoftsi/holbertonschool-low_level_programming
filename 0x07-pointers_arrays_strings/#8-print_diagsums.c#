@@ -1,0 +1,15 @@
+#include "holberton.h"
+/**
+ *print_diagsums
+ *@a: integer
+ *@size: integer
+ *
+ */
+void print_diagsums(int *a, int size)
+{
+  int con1, con2, acum1 = 0, acum2 = 0, fin1 = size * size;
+
+
+
+
+}
