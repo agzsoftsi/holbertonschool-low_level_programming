@@ -18,7 +18,7 @@ first = second;
 second = sum;
 if (con < 48)
 {
-printf("%lu, \n", sum);
+printf("%lu, ", sum);
 }
 else
 {
