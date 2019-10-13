@@ -11,7 +11,7 @@ long int second = 2, first = 1, sum = 0, con;
 printf("%lu, ", first);
 printf("%lu, ", second);
 
-for (con = 3; con < 49; con++)
+for (con = 3; con < 50; con++)
 {
 sum = first + second;
 first = second;
