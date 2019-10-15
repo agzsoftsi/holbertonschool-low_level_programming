@@ -12,7 +12,7 @@ char *_strdup(char *str)
 int con1, lon, con2;
 char *fundup;
 
-if (str == 0)
+if (str == NULL)
 return (NULL);
 
 for (con1 = 0; str[con1] != '\0'; con1++)
@@ -20,13 +20,11 @@ for (con1 = 0; str[con1] != '\0'; con1++)
 lon = con1;
 
 fundup = malloc(sizeof(str) * lon + 1);
-if (fundup == 0)
+if (fundup == NULL)
 return (NULL);
 
 for (con2 = 0; con2 < lon; con2++)
 fundup[con2] = str[con2];
-
-
 fundup[lon] = str[lon];
 
 return (fundup);
