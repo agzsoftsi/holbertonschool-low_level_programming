@@ -16,6 +16,7 @@ if (str == 0)
 return (NULL);
 
 for (con1 = 0; str[con1] != '\0'; con1++)
+;
 lon = con1;
 
 fundup = malloc(sizeof(str) * lon + 1);
