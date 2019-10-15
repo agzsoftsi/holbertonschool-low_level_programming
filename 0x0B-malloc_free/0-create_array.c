@@ -13,10 +13,12 @@ unsigned int con;
 char *parray;
 if (size == 0)
 return (NULL);
-else
-parray = malloc(size * sizeof(c));
+
+parray = malloc(sizeof(c) * size);
+if (parray == 0)
+return (NULL);
+
 for (con = 0; con < size; con++)
-*(parray + con) = c;
+parray[con] = c;
 return (parray);
-free(parray);
 }
