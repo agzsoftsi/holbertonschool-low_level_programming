@@ -25,7 +25,9 @@ return (NULL);
 for (con2 = 0; con2 < lon; con2++)
 fundup[con2] = str[con2];
 
-fundup[con2] = str[con2];
+
+fundup[lon] = str[lon];
+
 return (fundup);
 }
 
