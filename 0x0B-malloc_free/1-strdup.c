@@ -12,15 +12,15 @@ char *_strdup(char *str)
 int con1, lon, con2;
 char *fundup;
 
-if (str == NULL)
+if (str == 0)
 return (NULL);
 
 for (con1 = 0; str[con1] != '\0'; con1++)
 ;
 lon = con1;
 
-fundup = malloc(sizeof(str) * lon + 1);
-if (fundup == NULL)
+fundup = malloc(sizeof(char) * lon + 1);
+if (fundup == 0)
 return (NULL);
 
 for (con2 = 0; con2 < lon; con2++)
