@@ -30,7 +30,7 @@ return (NULL);
 for (con = 0; con < lon1; con++)
 strcon[con] = s1[con];
 
-for (; con < lon2 + lon2; con++)
+for (; con < lon1 + lon2; con++)
 strcon[con] = s2[con - lon1];
 strcon[lon1 + lon2] = '\0';
 
