@@ -18,4 +18,5 @@ parray = malloc(size * sizeof(c));
 for (con = 0; con < size; con++)
 *(parray + con) = c;
 return (parray);
+free(parray);
 }
