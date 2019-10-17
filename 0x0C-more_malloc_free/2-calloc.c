@@ -9,7 +9,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 unsigned int con;
-char *array;
+int *array;
 
 if (nmemb == 0 || size == 0)
 return (NULL);
