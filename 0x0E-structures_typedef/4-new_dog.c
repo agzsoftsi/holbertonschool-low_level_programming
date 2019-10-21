@@ -30,8 +30,8 @@ return (NULL);
 nowner = malloc(sizeof(char) * _strl(owner) + 1);
 if (nowner == NULL)
 {
-free(nname);
 free(ndog);
+free(nname);
 return (NULL);
 }
 _strcp(nname, name);
