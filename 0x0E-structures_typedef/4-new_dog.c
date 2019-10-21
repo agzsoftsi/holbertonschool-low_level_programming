@@ -9,68 +9,41 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-char *nname, *nowner;
 dog_t *ndog;
+int namel, ownerl, i;
 
-if (name == NULL || owner == NULL)
-return (NULL);
+for (namel = 0; name[namel] != '\0'; namel++)
+;
+
+for (ownerl = 0; owner[ownerl] != '\0'; ownerl++)
+;
 
 ndog = malloc(sizeof(dog_t));
 if (ndog == NULL)
 return (NULL);
 
-nname = malloc(sizeof(char) * _strl(name) + 1);
-if (nname == NULL)
+ndog->name = malloc(sizeof(char) * (namel + 1));
+if (ndog->name == NULL)
 {
 free(ndog);
 return (NULL);
 }
-/*_strcp(nname, name);*/
 
-nowner = malloc(sizeof(char) * _strl(owner) + 1);
-if (nowner == NULL)
+ndog->owner = malloc(sizeof(char) * (ownerl + 1));
+if (ndog->owner == NULL)
 {
 free(ndog);
-free(nname);
+free(ndog->name);
 return (NULL);
 }
-_strcp(nname, name);
-_strcp(nowner, owner);
 
-(*ndog).name = nname;
-(*ndog).age = age;
-(*ndog).owner = nowner;
+for (i = 0; i <= namel; i++)
+ndog->name[i] = name[i];
+
+ndog->age = age;
+
+for (i = 0; i <= ownerl; i++)
+ndog->owner[i] = owner[i];
 
 return (ndog);
-}
-
-/**
- *_strl - long of string
- *@s: string
- *Return: long of string
- */
-int _strl(char *s)
-{
-int con;
-for (con = 0; s[con] != '\0'; con++)
-;
-return (con);
-}
-
-/**
- *_strcp - copy a string
- *@dest: destiny
- *@src: origin
- *Return: copy of string
- */
-char *_strcp(char *dest, char *src)
-{
-int con1, con2;
-
-for (con1 = 0; src[con1] != '\0'; con1++)
-;
-
-for (con2 = 0; con2 < con1; con2++)
-dest[con2] = src[con2];
-return (dest);
 }
