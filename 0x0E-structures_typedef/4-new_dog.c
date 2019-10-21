@@ -25,7 +25,7 @@ if (nname == NULL)
 free(ndog);
 return (NULL);
 }
-_strcp(nname, name);
+/*_strcp(nname, name);*/
 
 nowner = malloc(sizeof(char) * _strl(owner) + 1);
 if (nowner == NULL)
@@ -34,6 +34,7 @@ free(nname);
 free(ndog);
 return (NULL);
 }
+_strcp(nname, name);
 _strcp(nowner, owner);
 
 (*ndog).name = nname;
