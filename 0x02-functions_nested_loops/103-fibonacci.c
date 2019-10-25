@@ -12,7 +12,7 @@ long pri = 0, sec = 1, sum, total_sum;
 int val;
 
 sum = pri + sec;
-while (sum < 3999999)
+while (sum <= 4000000)
 {
 val = sum % 2;
 sum = pri + sec;
