@@ -17,7 +17,7 @@ sum = ant + act;
 ant = act;
 act = sum;
 
-if (con < 48)
+if (con < 50)
 printf("%lu, ", sum);
 else
 printf("%lu\n", sum);
