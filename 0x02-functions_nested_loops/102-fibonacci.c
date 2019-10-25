@@ -6,21 +6,16 @@
  */
 int main(void)
 {
-long int con, act = 2, ant = 1, sum = 0;
+long pri = 1, sec = 2, sum;
 
-printf("%lu, ", ant);
-printf("%lu, ", act);
-
-for (con = 3; con < 49; con++)
+printf("1, 2");
+while (sum < 20365011073)
 {
-sum = ant + act;
-ant = act;
-act = sum;
-
-if (con < 50)
-printf("%lu, ", sum);
-else
-printf("%lu\n", sum);
+sum = pri + sec;
+printf(", %lu", sum);
+pri = sec;
+sec = sum;
 }
+printf("\n");
 return (0);
 }
