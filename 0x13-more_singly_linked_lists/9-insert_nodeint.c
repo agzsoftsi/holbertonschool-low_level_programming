@@ -16,11 +16,10 @@ if (head == NULL)
 return (NULL);
 
 new = malloc(sizeof(listint_t));
-new->n = n;
-
 if (new == NULL)
 return (NULL);
 
+new->n = n;
 if (idx == 0)
 {
 new->next = *head;
