@@ -5,26 +5,22 @@
  */
 void print_binary(unsigned long int n)
 {
-int bin, con;
-int zero = 0; /* flag to make sure leading 0s are not printed */
-int size; /* size in bits of n, minus 1 for +/- bit */
+unsigned long int con;
+int val = 0;
 
 if (n == 0)
-{
 _putchar('0');
-return;
-}
-
-size = sizeof(n) * 8 - 1;
-for (con = size; con >= 0; con--)
+else
 {
-bin = n >> con;
-if (bin & 1)
+for (con = 1UL << 63; con > 0; con >>= 1)
+{
+if (n & con)
 {
 _putchar('1');
-zero = 1;
+val = 1;
 }
-else if (zero == 1)
-putchar('0');
+else if (val)
+_putchar('0');
+}
 }
 }
