@@ -38,7 +38,7 @@ typedef struct dlistint_s
 
 ´´´
 
-Tasks
+## Tasks
 
 0 - 0-print_dlistint.c - Write a function that prints all the elements of a dlistint_t list.
 
