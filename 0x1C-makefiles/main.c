@@ -1,4 +1,4 @@
-void print(void);
+#include "m.h"
 /**
  *main - main program
  *Return: 0
