@@ -20,3 +20,17 @@
 - Don’t forget to push your header file
 
 
+# TASKS
+
+0. _putchar mandatory
+File: 0-holberton.c
+Score: 100.00% (Checks completed: 100.00%)
+Write a program that prints Holberton, followed by a new line.
+
+- The program should return 0
+```
+julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra _putchar.c 0-holberton.c -o 0-holberton
+julien@ubuntu:~/0x02$ ./0-holberton 
+Holberton
+julien@ubuntu:~/0x02$ 
+```
