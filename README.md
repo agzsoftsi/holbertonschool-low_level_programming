@@ -1,5 +1,3 @@
-# Foundations - Low-level programming & Algorithm
-
 ![](Top.png)
 
 ## :orange_book: C Language Introduction
@@ -39,8 +37,13 @@ Many later languages have borrowed syntax/features directly or indirectly from C
 ## :sagittarius: Author
 
 > :man: Carlos Andres Garcia Morales
+
 > :e-mail: [E-mail](agzsoftsi@gmail.com)
+
 > :octocat: [Github](https://github.com/agzsoftsi)
+
 > :bird: [Twiiter](https://twitter.com/karlgarmor)
+
 > :blue_book: [Linkedin](https://twitter.com/karlgarmor)
+
 > :globe_with_meridians: [WebPage](https://www.agzsoftsi.tech/)
