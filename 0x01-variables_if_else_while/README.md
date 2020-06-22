@@ -99,8 +99,7 @@ Last digit of 809065140 is 0 and is 0
 julien@ubuntu:~/0x01$
 ```
 
-
-**2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game **
+**2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game**
 
 File: [2-print_alphabet.c](2-print_alphabet.c/)
 
