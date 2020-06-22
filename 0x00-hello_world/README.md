@@ -29,7 +29,7 @@ File: 0-preprocessor
 
 - The C file name will be saved in the variable $CFILE
 - The output should be saved in the file c
-```
+```sh
 julien@ubuntu:~/c/0x00$ cat main.c 
 #include <stdio.h>
 
