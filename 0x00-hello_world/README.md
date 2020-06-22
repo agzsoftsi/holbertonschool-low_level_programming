@@ -65,7 +65,7 @@ File: 1-compiler
 - The C file name will be saved in the variable $CFILE
 - The output file should be named the same as the C file, but with the extension .o instead of .c.
 - Example: if the C file is main.c, the output file should be main.o
-```
+```sh
 julien@ubuntu:~/c/0x00$ export CFILE=main.c
 julien@ubuntu:~/c/0x00$ cat main.c
 #include <stdio.h>
@@ -95,7 +95,7 @@ File: 2-assembler
 - The C file name will be saved in the variable $CFILE
 - The output file should be named the same as the C file, but with the extension .s instead of .c.
 - Example: if the C file is main.c, the output file should be main.s
-```
+```sh
 julien@ubuntu:~/c/0x00$ export CFILE=main.c
 julien@ubuntu:~/c/0x00$ cat main.c
 #include <stdio.h>
@@ -141,7 +141,7 @@ julien@ubuntu:~/c/0x00$
 Write a script that compiles a C file and creates an executable named cisfun.
 File: 3-name
 - The C file name will be saved in the variable $CFILE
-```
+```sh
 julien@ubuntu:~/c/0x00$ export CFILE=main.c
 julien@ubuntu:~/c/0x00$ cat main.c
 #include <stdio.h>
@@ -169,7 +169,7 @@ File: 4-puts.c
 - Use the function puts
 - You are not allowed to use printf
 - Your program should end with the value 0
-```
+```sh
 julien@ubuntu:~/c/0x00$ gcc 4-puts.c && ./a.out
 "Programming is like building a multilingual puzzle
 julien@ubuntu:~/c/0x00$ echo $?
@@ -185,7 +185,7 @@ File: 5-printf.c
 - You are not allowed to use the function puts
 - Your program should return 0
 - Your program should compile without warning when using the -Wall gcc option
-```
+```sh
 julien@ubuntu:~/c/0x00$ gcc -Wall 5-printf.c
 julien@ubuntu:~/c/0x00$ ./a.out 
 with proper grammar, but the outcome is a piece of art,
@@ -202,7 +202,7 @@ File: 6-size.c
 - Warnings are allowed
 - Your program should return 0
 - You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option
-```
+```sh
 julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
 julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
 julien@ubuntu:~/c/0x00$ ./size32
@@ -241,7 +241,7 @@ File: 100-intel
 - The C file name will be saved in the variable $CFILE.
 - The output file should be named the same as the C file, but with the extension .s instead of .c.
 - Example: if the C file is main.c, the output file should be main.s
-```
+```sh
 julien@ubuntu:~/c/0x00$ export CFILE=main.c
 julien@ubuntu:~/c/0x00$ cat main.c
 #include <stdio.h>
@@ -289,7 +289,7 @@ File: 101-quote.c
 - Your program should return 1
 - Your program should compile without any warnings when using the -Wall gcc option
 
-```
+```sh
 julien@ubuntu:~/c/0x00$ gcc -Wall -o quote 101-quote.c
 julien@ubuntu:~/c/0x00$ ./quote
 and that piece of art is useful" - Dora Korpar, 2015-10-19
