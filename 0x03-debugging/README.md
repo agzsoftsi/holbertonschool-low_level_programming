@@ -19,7 +19,7 @@ Debugging is the process of finding and fixing errors in software that prevents 
 
 **0. Multiple mains**
 
-Files: [0-main.c](0-main.c/), [holberton.h](holberton.h/)
+Files: [0-main.c](0-main.c/) -  [holberton.h](holberton.h/)
 
 In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
 
@@ -76,7 +76,8 @@ carrie@ubuntu:/debugging$
 
 **1. Like, comment, subscribe**
 
-Fles: [1-main.c](1-main.c/)
+Files: [1-main.c](1-main.c/)
+
 Copy this main file. Comment out (don’t delete it!) the part of the code that is causing the output to go into an infinite loop.
 
 - Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
@@ -125,7 +126,7 @@ carrie@ubuntu:/debugging$
 
 **2. 0 > 972?**
 
-Files: [2-largest_number.c](2-largest_number.c/) [holberton.h](holberton.h)
+Files: [2-largest_number.c](2-largest_number.c/)  -  [holberton.h](holberton.h/)
 
 This program prints the largest of three integers.
 
@@ -207,7 +208,7 @@ Fix the code in 2-largest_number.c so that it correctly prints out the largest o
 
 **3. Leap year**
 
-Files: [3-print_remaining_days.c](3-print_remaining_days.c/) [holberton.h](holberton.h)
+Files: [3-print_remaining_days.c](3-print_remaining_days.c/)  -  [holberton.h/](holberton.h)
 
 This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
 
