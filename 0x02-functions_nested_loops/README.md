@@ -1,34 +1,36 @@
-# 0x02. C - Functions, nested loops
+﻿![](Top.png)
 
 ## Requirements
 
 ### General
 
-- Allowed editors: vi, vim, emacs
-- All your files will be compiled on Ubuntu 14.04 LTS
-- Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project is mandatory
-- Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-- You are not allowed to use global variables
-- No more than 5 functions per file
-- You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-- You are allowed to use _putchar
-- You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-- In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-- The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-- Don’t forget to push your header file
+> - Allowed editors: vi, vim, emacs
+> - All your files will be compiled on Ubuntu 14.04 LTS
+> - Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+> - All your files should end with a new line
+> - A README.md file, at the root of the folder of the project is mandatory
+> - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+> - You are not allowed to use global variables
+> - No more than 5 functions per file
+> - You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
+> - You are allowed to use _putchar
+> - You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
+> - In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+> - The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
+> - Don’t forget to push your header file
 
 
 # TASKS
 
-0. _putchar mandatory
-File: 0-holberton.c
+**0. _putchar mandatory**
+
+File: [0-holberton.c](0-holberton.c/)
 
 Write a program that prints Holberton, followed by a new line.
 
 - The program should return 0
-```
+
+```sh
 julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra _putchar.c 0-holberton.c -o 0-holberton
 julien@ubuntu:~/0x02$ ./0-holberton 
 Holberton
@@ -36,14 +38,16 @@ julien@ubuntu:~/0x02$
 ```
 
 
-1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game mandatory
-File: 1-alphabet.c
+**1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game mandatory**
+
+File: [1-alphabet.c](1-alphabet.c/)
 
 Write a function that prints the alphabet, in lowercase, followed by a new line.
 
 - Prototype: void print_alphabet(void);
 - You can only use _putchar twice in your code
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 1-main.c
 #include "holberton.h"
 
@@ -63,14 +67,16 @@ abcdefghijklmnopqrstuvwxyz
 julien@ubuntu:~/0x02$
 ```
 
+**2. 10 x alphabet mandatory**
 
-2. 10 x alphabet mandatory
-File: 2-print_alphabet_x10.c
+File: [2-print_alphabet_x10.c](2-print_alphabet_x10.c/)
+
 Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
 
 - Prototype: void print_alphabet_x10(void);
 - You can only use _putchar twice in your code
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 2-main.c
 #include "holberton.h"
 
@@ -99,8 +105,9 @@ abcdefghijklmnopqrstuvwxyz
 julien@ubuntu:~/0x02$
 ```
 
-3. islower mandatory
-File: 3-islower.c
+**3. islower mandatory**
+
+File: [3-islower.c](3-islower.c/)
 
 Write a function that checks for lowercase character.
 
@@ -108,7 +115,8 @@ Write a function that checks for lowercase character.
 - Returns 1 if c is lowercase
 - Returns 0 otherwise
 - FYI: The standard library provides a similar function: islower. Run man islower to learn more.
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 3-main.c 
 #include "holberton.h"
 
@@ -136,9 +144,9 @@ julien@ubuntu:~/0x02$ ./3-islower
 julien@ubuntu:~/0x02$ 
 ```
 
+**4. isalpha mandatory**
 
-4. isalpha mandatory
-File: 4-isalpha.c
+File: [4-isalpha.c](4-isalpha.c/)
 
 Write a function that checks for alphabetic character.
 
@@ -147,7 +155,7 @@ Write a function that checks for alphabetic character.
 - Returns 0 otherwise
 - FYI: The standard library provides a similar function: isalpha. Run man isalpha to learn more.
 
-```
+```sh
 julien@ubuntu:~/0x02$ cat 4-main.c 
 #include "holberton.h"
 
@@ -177,9 +185,10 @@ julien@ubuntu:~/0x02$ ./4-isalpha
 julien@ubuntu:~/0x02$ 
 ```
 
+**5. Sign mandatory**
 
-5. Sign mandatory
-File: 5-sign.c
+File: [5-sign.c](5-sign.c/)
+
 Write a function that prints the sign of a number.
 
 - Prototype: int print_sign(int n);
@@ -187,7 +196,7 @@ Write a function that prints the sign of a number.
 - Returns 0 and prints 0 if n is zero
 - Returns -1 and prints - if n is less than zero
 
-```
+```sh
 julien@ubuntu:~/0x02$ cat 5-main.c
 #include "holberton.h"
 
@@ -231,14 +240,16 @@ julien@ubuntu:~/0x02$ ./5-sign
 julien@ubuntu:~/0x02$
 ```
 
-6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you mandatory
-File: 6-abs.c
+**6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you mandatory**
+
+File: [6-abs.c](6-abs.c/)
 
 -Write a function that computes the absolute value of an integer.
 
 - Prototype: int _abs(int);
 - FYI: The standard library provides a similar function: abs. Run man abs to learn more.
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 6-main.c
 #include "holberton.h"
 #include <stdio.h>
@@ -271,14 +282,15 @@ julien@ubuntu:~/0x02$ ./6-abs
 julien@ubuntu:~/0x02$
 ```
 
+**7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important mandatory**
 
-7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important mandatory
-File: 7-print_last_digit.c
+File: [7-print_last_digit.c](7-print_last_digit.c/)
 Write a function that prints the last digit of a number.
 
 - Prototype: int print_last_digit(int);
 - Returns the value of the last digit
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 7-main.c
 #include "holberton.h"
 
@@ -304,14 +316,16 @@ julien@ubuntu:~/0x02$ ./7-last_digit
 julien@ubuntu:~/0x02$
 ```
 
+**8. I'm federal agent Jack Bauer, and today is the longest day of my life mandatory**
 
-8. I'm federal agent Jack Bauer, and today is the longest day of my life mandatory
-File: 8-24_hours.c
+File: [8-24_hours.c](8-24_hours.c/)
+
 Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
 
 - Prototype: void jack_bauer(void);
 - You can listen to this soundtrack while coding :)
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 8-main.c
 #include "holberton.h"
 
@@ -353,15 +367,16 @@ julien@ubuntu:~/0x02$ ./8-24 | wc -l
 julien@ubuntu:~/0x02$
 ```
 
+**9. Learn your times table mandatory**
 
-9. Learn your times table mandatory
-File: 9-times_table.c
+File: [9-times_table.c](9-times_table.c/)
+
 Write a function that prints the 9 times table, starting with 0.
 
 - Prototype: void times_table(void)
 - Format: see example
 
-```
+```sh
 julien@ubuntu:~/0x02$ cat 9-main.c
 #include "holberton.h"
 
@@ -401,14 +416,15 @@ julien@ubuntu:~/0x02$ ./9-times_table | tr ' ' . | cat -e
 julien@ubuntu:~/0x02$
 ```
 
+**10. a + b mandatory**
 
-10. a + b mandatory
-File: 10-add.c
+File: [10-add.c](10-add.c/)
+
 Write a function that adds two integers and returns the result.
 
 - Prototype: int add(int, int);
 
-```
+```sh
 julien@ubuntu:~/$ cat 10-main.c
 #include "holberton.h"
 #include <stdio.h>
@@ -432,9 +448,10 @@ julien@ubuntu:~/0x02$ ./10-add
 julien@ubuntu:~/0x02$ 
 ```
 
+**11. Holberton School, 98 Battery Street, the OG mandatory**
 
-11. Holberton School, 98 Battery Street, the OG mandatory
-File: 11-print_to_98.c
+File: [11-print_to_98.c](11-print_to_98.c/)
+
 Write a function that prints all natural numbers from n to 98, followed by a new line.
 
 - Prototype: void print_to_98(int n);
@@ -444,7 +461,7 @@ Write a function that prints all natural numbers from n to 98, followed by a new
 - The last printed number should be 98
 - You are allowed to use the standard library
 
-```
+```sh
 julien@ubuntu:~/0x02$ cat 11-main.c
 #include "holberton.h"
 
@@ -472,16 +489,17 @@ julien@ubuntu:~/0x02$ ./11-98
 julien@ubuntu:~/0x02$ 
 ```
 
+**12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself #advanced**
 
+File: [100-times_table.c](100-times_table.c/)
 
-12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself #advanced
-File: 100-times_table.c
 Write a function that prints the n times table, starting with 0.
 
 - Prototype: void print_times_table(int n)
 - If n is greater than 15 or less than 0 the function should not print anything
 - Format: see example
-```
+
+```sh
 julien@ubuntu:~/0x02$ cat 100-main.c
 #include "holberton.h"
 
@@ -559,31 +577,35 @@ $
 julien@ubuntu:~/0x02$
 ```
 
+**13. Nature made the natural numbers; All else is the work of women #advanced**
 
-13. Nature made the natural numbers; All else is the work of women #advanced
+File: [101-natural.c](101-natural.c/)
 
-File: 101-natural.c
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Write a program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
 
 - You are allowed to use the standard library
 
+**14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A #advanced**
 
-14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A #advanced
-File: 102-fibonacci.c
+File: [102-fibonacci.c](102-fibonacci.c/)
+
 Write a program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
 
 - The numbers must be separated by comma, followed by a space , 
 - You are allowed to use the standard library
 
 
-15. Even Liber Abbaci #advanced
-File: 103-fibonacci.c
+**15. Even Liber Abbaci #advanced**
+
+File: [103-fibonacci.c](103-fibonacci.c/)
 Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with 1 and 2, the first 10 terms will be: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. By considering the terms in the Fibonacci sequence whose values do not exceed 4,000,000, write a program that finds and prints the sum of the even-valued terms, followed by a new line.
 
 - You are allowed to use the standard library
 
-16. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A+ #advanced
-File: 104-fibonacci.c
+**16. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A+ #advanced**
+
+File: [104-fibonacci.c](104-fibonacci.c/)
+
 Write a program that finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line.
 
 - The numbers should be separated by comma, followed by a space ,
