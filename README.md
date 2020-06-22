@@ -1,13 +1,13 @@
 # Foundations - Low-level programming & Algorithm
 
-![](logo.jpg)
+![](Top.png)
 
-## C Language Introduction
+## :orange_book: C Language Introduction
 
 C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of C language include low-level access to memory, a simple set of keywords, and clean style, these features make C language suitable for system programmings like an operating system or compiler development.
 Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript, and many other languages are mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).
 
-## Content
+## :books: Content
 
 - [0x00-hello_world](/0x00-hello_world)
 - [0x01-variables_if_else_while](/0x01-variables_if_else_while)
@@ -33,3 +33,14 @@ Many later languages have borrowed syntax/features directly or indirectly from C
 - [0x17-doubly_linked_lists](/0x17-doubly_linked_lists)
 - [0x18-dynamic_libraries](/0x18-dynamic_libraries)
 - [0x1A-hash_tables](/0x1A-hash_tables)
+- [0x1C-makefiles](/0x1C-makefiles)
+- [0x1E-search_algorithms](/0x1E-search_algorithms)
+
+## :sagittarius: Author
+
+> :man: Carlos Andres Garcia Morales
+> :e-mail: [E-mail](agzsoftsi@gmail.com)
+> :octocat: [Github](https://github.com/agzsoftsi)
+> :bird: [Twiiter](https://twitter.com/karlgarmor)
+> :blue_book: [Linkedin](https://twitter.com/karlgarmor)
+> :globe_with_meridians: [WebPage](https://www.agzsoftsi.tech/)
