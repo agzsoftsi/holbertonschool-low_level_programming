@@ -259,7 +259,7 @@ julien@ubuntu:~/0x01$ ./10-print_comb2
 julien@ubuntu:~/0x01$ 
 ```
 
-**11. Inventing is a combination of brains and materials. The more brains you use, the less material you need **
+**11. Inventing is a combination of brains and materials. The more brains you use, the less material you need**
 
 File: [100-print_comb3.c](100-print_comb3.c/)
 
