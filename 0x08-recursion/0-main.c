@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-_puts_recursion("Betty Holberton");
-return (0);
+	_puts_recursion("Betty Holberton");
+	return (0);
 }

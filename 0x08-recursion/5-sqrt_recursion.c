@@ -6,7 +6,7 @@
  */
 int _sqrt_recursion(int n)
 {
-return (_sqrt2(1, n));
+	return (_sqrt2(1, n));
 }
 /**
  *_sqrt2 - find square
@@ -16,10 +16,10 @@ return (_sqrt2(1, n));
  */
 int _sqrt2(int a, int b)
 {
-if (a * a > b)
-return (-1);
-else if (a * a == b)
-return (a);
-else
-return (_sqrt2(a += 1, b));
+	if (a * a > b)
+		return (-1);
+	else if (a * a == b)
+		return (a);
+	else
+		return (_sqrt2(a += 1, b));
 }

@@ -8,9 +8,9 @@
  */
 int is_prime_number(int n)
 {
-if (n < 0 || n == 1)
-return (0);
-return (prime2(2, n));
+	if (n < 0 || n == 1)
+		return (0);
+	return (prime2(2, n));
 }
 
 /**
@@ -21,9 +21,9 @@ return (prime2(2, n));
  */
 int prime2(int x, int y)
 {
-if (y == x)
-return (1);
-else if (y % x == 0)
-return (0);
-return (prime2(x + 1, y));
+	if (y == x)
+		return (1);
+	else if (y % x == 0)
+		return (0);
+	return (prime2(x + 1, y));
 }

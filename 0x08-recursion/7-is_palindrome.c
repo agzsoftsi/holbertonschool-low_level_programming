@@ -9,11 +9,12 @@ int revstring(char *s, int lon);
  */
 int is_palindrome(char *s)
 {
-int lonstr;
-lonstr = rec_longstring(s);
-if (lonstr <= 1)
-return (0);
-return (revstring(s, lonstr));
+	int lonstr;
+
+	lonstr = rec_longstring(s);
+	if (lonstr <= 1)
+		return (0);
+	return (revstring(s, lonstr));
 }
 /**
  *revstring - checks the string
@@ -23,12 +24,12 @@ return (revstring(s, lonstr));
  */
 int revstring(char *s, int lon)
 {
-if (lon <= 1)
-return (1);
-if (*s != s[lon - 1])
-return (0);
-else
-return (revstring(s + 1, lon - 2));
+	if (lon <= 1)
+		return (1);
+	if (*s != s[lon - 1])
+		return (0);
+	else
+		return (revstring(s + 1, lon - 2));
 }
 
 /**
@@ -38,7 +39,7 @@ return (revstring(s + 1, lon - 2));
  */
 int rec_longstring(char *s)
 {
-if (*s == '\0')
-return (0);
-return (1 + rec_longstring(s + 1));
+	if (*s == '\0')
+		return (0);
+	return (1 + rec_longstring(s + 1));
 }
