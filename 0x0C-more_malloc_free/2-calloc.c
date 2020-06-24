@@ -8,16 +8,16 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *array;
+	void *array;
 
-if (nmemb == 0 || size == 0)
-return (NULL);
-array = malloc(nmemb * size);
-if (array == 0)
-return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	array = malloc(nmemb * size);
+	if (array == 0)
+		return (NULL);
 
-_memset(array, 0, nmemb * size);
-return (array);
+	_memset(array, 0, nmemb * size);
+	return (array);
 }
 
 /**
@@ -29,8 +29,9 @@ return (array);
  */
 char *_memset(char *mem, char cons, unsigned int num)
 {
-unsigned int con;
-for (con = 0; con < num; con++)
-mem[con] = cons;
-return (mem);
+	unsigned int con;
+
+	for (con = 0; con < num; con++)
+		mem[con] = cons;
+	return (mem);
 }

@@ -10,17 +10,17 @@
  */
 int *array_range(int min, int max)
 {
-int *lon;
-int con1, con2;
+	int *lon;
+	int con1, con2;
 
-if (min > max)
-return (NULL);
+	if (min > max)
+		return (NULL);
 
-lon = malloc(sizeof(int) * (max - min + 1));
-if (lon == NULL)
-return (NULL);
+	lon = malloc(sizeof(int) * (max - min + 1));
+	if (lon == NULL)
+		return (NULL);
 
-for (con1 = min, con2 = 0; con1 <= max; con1++, con2++)
-lon[con2] = con1;
-return (lon);
+	for (con1 = min, con2 = 0; con1 <= max; con1++, con2++)
+		lon[con2] = con1;
+	return (lon);
 }

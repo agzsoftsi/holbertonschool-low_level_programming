@@ -13,32 +13,32 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int con, lon1, lon2;
-char *constr;
+	unsigned int con, lon1, lon2;
+	char *constr;
 
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-lon1 = _strl(s1);
-lon2 = _strl(s2);
+	lon1 = _strl(s1);
+	lon2 = _strl(s2);
 
-if (n > lon2)
-n = lon2;
+	if (n > lon2)
+		n = lon2;
 
-constr = malloc(sizeof(char) * (lon1 + n + 1));
-if (constr == NULL)
-return (NULL);
+	constr = malloc(sizeof(char) * (lon1 + n + 1));
+	if (constr == NULL)
+		return (NULL);
 
-for (con = 0; con < lon1; con++)
-constr[con] = s1[con];
+	for (con = 0; con < lon1; con++)
+		constr[con] = s1[con];
 
-for (; con < lon1 + n; con++)
-constr[con] = s2[con - lon1];
+	for (; con < lon1 + n; con++)
+		constr[con] = s2[con - lon1];
 
-constr[lon1 + n] = '\0';
-return (constr);
+	constr[lon1 + n] = '\0';
+	return (constr);
 }
 
 
@@ -50,8 +50,9 @@ return (constr);
 
 int _strl(char *s)
 {
-int con;
-for (con = 0; s[con] != '\0'; con++)
-;
-return (con);
+	int con;
+
+	for (con = 0; s[con] != '\0'; con++)
+		;
+	return (con);
 }
