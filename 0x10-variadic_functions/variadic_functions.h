@@ -9,8 +9,8 @@
  */
 typedef struct op
 {
-char *c;
-void (*f)();
+	char *c;
+	void (*f)();
 } p_t;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
