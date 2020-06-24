@@ -6,15 +6,15 @@
  */
 size_t listint_len(const listint_t *h)
 {
-size_t con = 0;
-const listint_t *move = h;
+	size_t con = 0;
+	const listint_t *move = h;
 
-if (move == NULL)
-return (0);
-while (move != NULL)
-{
-move = move->next;
-con++;
-}
-return (con);
+	if (move == NULL)
+		return (0);
+	while (move != NULL)
+	{
+		move = move->next;
+		con++;
+	}
+	return (con);
 }

@@ -7,18 +7,18 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-listint_t *move;
-unsigned int con = 0;
+	listint_t *move;
+	unsigned int con = 0;
 
-move = head;
-while (move != NULL)
-{
-if (con == index)
-{
-return (move);
-}
-con++;
-move = move->next;
-}
-return (move);
+	move = head;
+	while (move != NULL)
+	{
+		if (con == index)
+		{
+			return (move);
+		}
+		con++;
+		move = move->next;
+	}
+	return (move);
 }

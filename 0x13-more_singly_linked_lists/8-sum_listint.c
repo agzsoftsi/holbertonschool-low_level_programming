@@ -6,15 +6,15 @@
  */
 int sum_listint(listint_t *head)
 {
-listint_t *move;
-unsigned int add = 0;
+	listint_t *move;
+	unsigned int add = 0;
 
-move = head;
+	move = head;
 
-while (move != NULL)
-{
-add += move->n;
-move = move->next;
-}
-return (add);
+	while (move != NULL)
+	{
+		add += move->n;
+		move = move->next;
+	}
+	return (add);
 }
