@@ -9,30 +9,30 @@
  */
 char *argstostr(int ac, char **av)
 {
-int con1, con2;
-int ini = 0, lon = 0;
-char *strcon;
+	int con1, con2;
+	int ini = 0, lon = 0;
+	char *strcon;
 
-if (ac == 0 || av == 0)
-return (NULL);
+	if (ac == 0 || av == 0)
+		return (NULL);
 
-for (con1 = 0; con1 < ac; con1++)
-lon += _strl(av[con1]);
+	for (con1 = 0; con1 < ac; con1++)
+		lon += _strl(av[con1]);
 
-strcon = malloc(sizeof(char) * (lon + ac + 1));
-if (strcon == 0)
-return (NULL);
+	strcon = malloc(sizeof(char) * (lon + ac + 1));
+	if (strcon == 0)
+		return (NULL);
 
-for (con1 = 0; con1 < ac; con1++)
-{
-for (con2 = 0; av[con1][con2] != '\0'; con2++)
-strcon[ini++] = av[con1][con2];
+	for (con1 = 0; con1 < ac; con1++)
+	{
+		for (con2 = 0; av[con1][con2] != '\0'; con2++)
+			strcon[ini++] = av[con1][con2];
 
-strcon[ini++] = '\n';
-}
-strcon[ini++] = '\0';
+		strcon[ini++] = '\n';
+	}
+	strcon[ini++] = '\0';
 
-return (strcon);
+	return (strcon);
 }
 
 /**
@@ -42,8 +42,9 @@ return (strcon);
  */
 int _strl(char *s)
 {
-int i;
-for (i = 0; s[i] != '\0'; i++)
-;
-return (i);
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
 }

@@ -9,30 +9,31 @@
  */
 int **alloc_grid(int width, int height)
 {
-int con1, con2;
-int **array;
-if (height <= 0 || width <= 0)
-return (NULL);
+	int con1, con2;
+	int **array;
 
-array = malloc(sizeof(int *) * height);
-if (array == 0)
-return (NULL);
+	if (height <= 0 || width <= 0)
+		return (NULL);
 
-for (con1 = 0; con1 < height; con1++)
-{
-array[con1] = malloc(sizeof(int) * width);
-if (array[con1] == 0)
-{
-free(array);
-for (con2 = 0; con2 <= con1; con2++)
-free(array[con2]);
+	array = malloc(sizeof(int *) * height);
+	if (array == 0)
+		return (NULL);
 
-return (NULL);
-}
+	for (con1 = 0; con1 < height; con1++)
+	{
+		array[con1] = malloc(sizeof(int) * width);
+		if (array[con1] == 0)
+		{
+			free(array);
+			for (con2 = 0; con2 <= con1; con2++)
+				free(array[con2]);
 
-for (con2 = 0; con2 < width; con2++)
-array[con1][con2] = 0;
-}
+			return (NULL);
+		}
 
-return (array);
+		for (con2 = 0; con2 < width; con2++)
+			array[con1][con2] = 0;
+	}
+
+	return (array);
 }

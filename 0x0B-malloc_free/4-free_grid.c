@@ -8,9 +8,9 @@
  */
 void free_grid(int **grid, int height)
 {
-int con;
+	int con;
 
-for (con = 0; con < height; con++)
-free(grid[con]);
-free(grid);
+	for (con = 0; con < height; con++)
+		free(grid[con]);
+	free(grid);
 }

@@ -12,29 +12,29 @@ int _strl(char *s);
  */
 char *str_concat(char *s1, char *s2)
 {
-int con, lon1, lon2;
-char *strcon;
+	int con, lon1, lon2;
+	char *strcon;
 
-if (s1 == 0)
-s1 = "";
-if (s2 == 0)
-s2 = "";
+	if (s1 == 0)
+		s1 = "";
+	if (s2 == 0)
+		s2 = "";
 
-lon1 = _strl(s1);
-lon2 = _strl(s2);
+	lon1 = _strl(s1);
+	lon2 = _strl(s2);
 
-strcon = malloc(sizeof(char) * (lon1 + lon2 + 1));
-if (strcon == 0)
-return (NULL);
+	strcon = malloc(sizeof(char) * (lon1 + lon2 + 1));
+	if (strcon == 0)
+		return (NULL);
 
-for (con = 0; con < lon1; con++)
-strcon[con] = s1[con];
+	for (con = 0; con < lon1; con++)
+		strcon[con] = s1[con];
 
-for (; con < lon1 + lon2; con++)
-strcon[con] = s2[con - lon1];
-strcon[lon1 + lon2] = '\0';
+	for (; con < lon1 + lon2; con++)
+		strcon[con] = s2[con - lon1];
+	strcon[lon1 + lon2] = '\0';
 
-return (strcon);
+	return (strcon);
 }
 
 /**
@@ -44,8 +44,9 @@ return (strcon);
  */
 int _strl(char *s)
 {
-int i;
-for (i = 0; s[i] != '\0'; i++)
-;
-return (i);
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
 }

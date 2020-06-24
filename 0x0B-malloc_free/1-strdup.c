@@ -9,24 +9,24 @@
  */
 char *_strdup(char *str)
 {
-int con1, lon, con2;
-char *fundup;
+	int con1, lon, con2;
+	char *fundup;
 
-if (str == 0)
-return (NULL);
+	if (str == 0)
+		return (NULL);
 
-for (con1 = 0; str[con1] != '\0'; con1++)
-;
-lon = con1;
+	for (con1 = 0; str[con1] != '\0'; con1++)
+		;
+	lon = con1;
 
-fundup = malloc(sizeof(char) * lon + 1);
-if (fundup == 0)
-return (NULL);
+	fundup = malloc(sizeof(char) * lon + 1);
+	if (fundup == 0)
+		return (NULL);
 
-for (con2 = 0; con2 < lon; con2++)
-fundup[con2] = str[con2];
-fundup[lon] = str[lon];
+	for (con2 = 0; con2 < lon; con2++)
+		fundup[con2] = str[con2];
+	fundup[lon] = str[lon];
 
-return (fundup);
+	return (fundup);
 }
 

@@ -9,16 +9,17 @@
 
 char *create_array(unsigned int size, char c)
 {
-unsigned int con;
-char *parray;
-if (size == 0)
-return (NULL);
+	unsigned int con;
+	char *parray;
 
-parray = malloc(sizeof(c) * size);
-if (parray == 0)
-return (NULL);
+	if (size == 0)
+		return (NULL);
 
-for (con = 0; con < size; con++)
-parray[con] = c;
-return (parray);
+	parray = malloc(sizeof(c) * size);
+	if (parray == 0)
+		return (NULL);
+
+	for (con = 0; con < size; con++)
+		parray[con] = c;
+	return (parray);
 }
