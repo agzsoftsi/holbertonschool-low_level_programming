@@ -7,17 +7,18 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-int con, index;
-unsigned long int num;
-index = (sizeof(unsigned long int) * 8) - 1;
-num = n ^ m;
+	int con, index;
+	unsigned long int num;
 
-for (con = 0; index >= 0; index--)
-{
-if (((num >> index) &1) == 1)
-{
-con += 1;
-}
-}
-return (con);
+	index = (sizeof(unsigned long int) * 8) - 1;
+	num = n ^ m;
+
+	for (con = 0; index >= 0; index--)
+	{
+		if (((num >> index) &1) == 1)
+		{
+			con += 1;
+		}
+	}
+	return (con);
 }
