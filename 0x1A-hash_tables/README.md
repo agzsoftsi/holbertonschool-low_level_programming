@@ -1,26 +1,27 @@
-# 0x1A. C - Hash tables
+﻿![](Top.png)
 
 ## Requirements
 
-# General
+### General
 
-- Allowed editors: vi, vim, emacs
-- All your files will be compiled on Ubuntu 14.04 LTS
-- Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project is mandatory
-- Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-- You are not allowed to use global variables
-- No more than 5 functions per file
-- You are allowed to use the C standard library
-- The prototypes of all your functions should be included in your header file called hash_tables.h
-- Don’t forget to push your header file
-- All your header files should be include guarded
+> - Allowed editors: vi, vim, emacs
+> - All your files will be compiled on Ubuntu 14.04 LTS
+> - Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+> - All your files should end with a new line
+> - A README.md file, at the root of the folder of the project is mandatory
+> - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+> - You are not allowed to use global variables
+> - No more than 5 functions per file
+> - You are allowed to use the C standard library
+> - The prototypes of all your functions should be included in your header file called hash_tables.h
+> - Don’t forget to push your header file
+> - All your header files should be include guarded
 
-## Data Structures
+### Data Structures
 
 Please use these data structures for this project:
-```
+
+```sh
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -51,15 +52,17 @@ typedef struct hash_table_s
 } hash_table_t;
 ```
 
-## Python Dictionaries
+### Python Dictionaries
 
 Python dictionaries are implemented using hash tables. When you will be done with this project, you will be able to better understand the power and simplicity of Python dictionaries. So much is actually happening when you type d = {'a': 1, 'b': 2}, but everything looks so simple for the user. Python doesn’t use the exact same implementation than the one you will work on today though. If you are curious on how it works under the hood, here is a good blog post about how dictionaries are implemented in Python 2.7 (not mandatory).
 
 
-## TASKS
+# Tasks
 
-0. >>> ht = {} mandatory
-File: 0-hash_table_create.c
+**0. >>> ht = {}**
+
+File: [0-hash_table_create.c](0-hash_table_create.c/)
+
 Write a function that creates a hash table.
 
 - Prototype: hash_table_t *hash_table_create(unsigned long int size);
@@ -67,7 +70,7 @@ Write a function that creates a hash table.
 - Returns a pointer to the newly created hash table
 - If something went wrong, your function should return NULL
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 0-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -113,17 +116,18 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 ==7602== For counts of detected and suppressed errors, rerun with: -v
 ==7602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x1A. Hash tables$
-
 ```
 
-1. djb2 mandatory
+**1. djb2**
 
 Write a hash function implementing the djb2 algorithm.
-File: 1-djb2.c
+
+File: [1-djb2.c](1-djb2.c/)
+
 - Prototype: unsigned long int hash_djb2(const unsigned char *str);
 - You are allowed to copy and paste the function from this page
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
 unsigned long int hash_djb2(const unsigned char *str)
 {
@@ -167,21 +171,22 @@ julien@ubuntu:~/0x1A. Hash tables$ ./b
 3749890792216096085
 5861846
 julien@ubuntu:~/0x1A. Hash tables$
-
 ```
 
-2. key -> index mandatory
+**2. key -> index**
+
+File: [2-key_index.c](2-key_index.c/)
 
 Write a function that gives you the index of a key.
-File: 2-key_index.c
+
 - Prototype: unsigned long int key_index(const unsigned char *key, unsigned long int size);
-- where key is the key
-- and size is the size of the array of the hash table
+> - where key is the key
+> - and size is the size of the array of the hash table
 - This function should use the hash_djb2 function that you wrote earlier
 - Returns the index at which the key/value pair should be stored in the array of the hash table
 - You will have to use this hash function for all the next tasks
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 2-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -219,20 +224,22 @@ julien@ubuntu:~/0x1A. Hash tables$ ./c
 5861846
 470
 julien@ubuntu:~/0x1A. Hash tables$ 
-
 ```
-3. >>> ht['betty'] = 'holberton' mandatory
+
+**3. >>> ht['betty'] = 'holberton'**
+
+File: [3-hash_table_set.c](3-hash_table_set.c/)
 
 Write a function that adds an element to the hash table.
-File: 3-hash_table_set.c
+
 - Prototype: int hash_table_set(hash_table_t *ht, const char *key, const char *value);
-- Where ht is the hash table you want to add or update the key/value to
-- key is the key. key can not be an empty string
-- and value is the value associated with the key. value must be duplicated. value can be an empty string
+> - Where ht is the hash table you want to add or update the key/value to
+> - key is the key. key can not be an empty string
+> - and value is the value associated with the key. value must be duplicated. value can be an empty string
 - Returns: 1 if it succeeded, 0 otherwise
 - In case of collision, add the new node at the beginning of the list
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 3-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -257,16 +264,18 @@ julien@ubuntu:~/0x1A. Hash tables$
 ```
 
 
-4. >>> ht['betty'] mandatory
+**4. >>> ht['betty']**
+
+File: [4-hash_table_get.c](4-hash_table_get.c/)
 
 Write a function that retrieves a value associated with a key.
-File: 4-hash_table_get.c
+
 - Prototype: char *hash_table_get(const hash_table_t *ht, const char *key);
-- where ht is the hash table you want to look into
-- and key is the key you are looking for
+> - where ht is the hash table you want to look into
+> - and key is the key you are looking for
 - Returns the value associated with the element, or NULL if key couldn’t be found
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 4-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -324,18 +333,20 @@ javascript:(null)
 julien@ubuntu:~/0x1A. Hash tables$ 
 ```
 
-5. >>> print(ht) mandatory
+**5. >>> print(ht)**
+
+File: [5-hash_table_print.c](5-hash_table_print.c/)
 
 Write a function that prints a hash table.
-File: 5-hash_table_print.c
+
 - Prototype: void hash_table_print(const hash_table_t *ht);
-- where ht is the hash table
+> - where ht is the hash table
 - You should print the key/value in the order that they appear in the array of hash table
-- Order: array, list
+> - Order: array, list
 - Format: see example
 - If ht is NULL, don’t print anything
 
-```
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 5-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -371,14 +382,16 @@ julien@ubuntu:~/0x1A. Hash tables$
 ```
 
 
-6. >>> del ht mandatory
+**6. >>> del ht**
+
+File: [6-hash_table_delete.c](6-hash_table_delete.c/)
 
 Write a function that deletes a hash table.
-File: 6-hash_table_delete.c
-- Prototype: void hash_table_delete(hash_table_t *ht);
-- where ht is the hash table
 
-```
+- Prototype: void hash_table_delete(hash_table_t *ht);
+> - where ht is the hash table
+
+```sh
 julien@ubuntu:~/0x1A. Hash tables$ cat 6-main.c 
 #include <stdlib.h>
 #include <string.h>
