@@ -9,39 +9,39 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-char *nname, *nowner;
-dog_t *ndog;
+	char *nname, *nowner;
+	dog_t *ndog;
 
-if (name == NULL || owner == NULL)
-return (NULL);
+	if (name == NULL || owner == NULL)
+		return (NULL);
 
-ndog = malloc(sizeof(dog_t));
-if (ndog == NULL)
-return (NULL);
+	ndog = malloc(sizeof(dog_t));
+	if (ndog == NULL)
+		return (NULL);
 
-nname = malloc(sizeof(char) * _strl(name) + 1);
-if (nname == NULL)
-{
-free(ndog);
-return (NULL);
-}
-/*_strcp(nname, name);*/
+	nname = malloc(sizeof(char) * _strl(name) + 1);
+	if (nname == NULL)
+	{
+		free(ndog);
+		return (NULL);
+	}
+	/*_strcp(nname, name);*/
 
-nowner = malloc(sizeof(char) * _strl(owner) + 1);
-if (nowner == NULL)
-{
-free(ndog);
-free(nname);
-return (NULL);
-}
-_strcp(nname, name);
-_strcp(nowner, owner);
+	nowner = malloc(sizeof(char) * _strl(owner) + 1);
+	if (nowner == NULL)
+	{
+		free(ndog);
+		free(nname);
+		return (NULL);
+	}
+	_strcp(nname, name);
+	_strcp(nowner, owner);
 
-(*ndog).name = nname;
-(*ndog).age = age;
-(*ndog).owner = nowner;
+	(*ndog).name = nname;
+	(*ndog).age = age;
+	(*ndog).owner = nowner;
 
-return (ndog);
+	return (ndog);
 }
 
 /**
@@ -51,10 +51,10 @@ return (ndog);
  */
 int _strl(char *s)
 {
-int con;
-for (con = 0; s[con] != '\0'; con++)
-;
-return (con);
+	int con;
+	for (con = 0; s[con] != '\0'; con++)
+		;
+	return (con);
 }
 
 /**
@@ -65,12 +65,12 @@ return (con);
  */
 char *_strcp(char *dest, char *src)
 {
-int con1, con2;
+	int con1, con2;
 
-for (con1 = 0; src[con1] != '\0'; con1++)
-;
+	for (con1 = 0; src[con1] != '\0'; con1++)
+		;
 
-for (con2 = 0; con2 < con1; con2++)
-dest[con2] = src[con2];
-return (dest);
+	for (con2 = 0; con2 < con1; con2++)
+		dest[con2] = src[con2];
+	return (dest);
 }
