@@ -32,7 +32,7 @@ Many later languages have borrowed syntax/features directly or indirectly from C
 - [0x16-simple_shell](/0x16-simple_shell)
 - [0x17-doubly_linked_lists](/0x17-doubly_linked_lists)
 - [0x18-dynamic_libraries](/0x18-dynamic_libraries)
-- [0x19-stacks_Queues_LIFO_FIFO](/0x19-stacks_Queues_LIFO_FIFO)
+- [0x19-stacks_Queues_LIFO_FIFO_Monty](/0x19-stacks_Queues_LIFO_FIFO_Monty)
 - [0x1A-hash_tables](/0x1A-hash_tables)
 - [0x1B-sorting_algorithms_Big_O](/0x1B-sorting_algorithms_Big_O)
 - [0x1C-makefiles](/0x1C-makefiles)
