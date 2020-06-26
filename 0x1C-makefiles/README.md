@@ -1,21 +1,23 @@
-# 0x1C. C - Makefiles
+﻿![](Top.png)
 
 ## Requirements
 
 ### General
 
-- Allowed editors: vi, vim, emacs
-- OS: Ubuntu 14.04 LTS
-- Version of gcc: 4.8.4
-- Version of make: GNU Make 3.81
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project, is mandatory
+> - Allowed editors: vi, vim, emacs
+> - OS: Ubuntu 14.04 LTS
+> - Version of gcc: 4.8.4
+> - Version of make: GNU Make 3.81
+> - All your files should end with a new line
+> - A README.md file, at the root of the folder of the project, is mandatory
 
 
 # Tasks
 
-0. make -f 0-Makefile mandatory
-File: 0-Makefile
+**0. make -f 0-Makefile**
+
+File: [0-Makefile](0-Makefile)
+
 Create your first Makefile.
 
 Requirements:
@@ -24,7 +26,8 @@ Requirements:
 - rules: all
 - The all rule builds your executable
 - variables: none
-```
+
+```sh
 julien@ubuntu:~/0x1C. Makefiles$ make -f 0-Makefile 
 gcc main.c holberton.c -o holberton
 julien@ubuntu:~/0x1C. Makefiles$ ./holberton 
@@ -57,8 +60,10 @@ julien@ubuntu:~/0x1C. Makefiles$
 ```
 
 
-1. make -f 1-Makefile mandatory
-File: 1-Makefile
+**1. make -f 1-Makefile**
+
+File: [1-Makefile](1-Makefile/)
+
 Requirements:
 
 - name of the executable: holberton
@@ -68,7 +73,7 @@ Requirements:
 - CC: the compiler to be used
 - SRC: the .c files
 
-```
+```sh
 julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
 gcc main.c holberton.c -o holberton
 julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
@@ -76,8 +81,10 @@ gcc main.c holberton.c -o holberton
 julien@ubuntu:~/0x1C. Makefiles$
 ```
 
-2. make -f 2-Makefile mandatory
-File: 2-Makefile
+**2. make -f 2-Makefile**
+
+File: [2-Makefile](2-Makefile)
+
 Create your first useful Makefile.
 
 Requirements:
@@ -92,7 +99,8 @@ Requirements:
 - NAME: the name of the executable
 - The all rule should recompile only the updated source files
 - You are not allowed to have a list of all the .o files
-```
+
+```sh
 julien@ubuntu:~/0x1C. Makefiles$ make -f 2-Makefile
 gcc    -c -o main.o main.c
 gcc    -c -o holberton.o holberton.c
@@ -106,8 +114,10 @@ gcc main.o holberton.o -o holberton
 julien@ubuntu:~/0x1C. Makefiles$ 
 ```
 
-3. make -f 3-Makefile mandatory
-File: 3-Makefile
+**3. make -f 3-Makefile**
+
+File: [3-Makefile](3-Makefile)
+
 Requirements:
 
 - name of the executable: holberton
@@ -126,7 +136,8 @@ Requirements:
 - The all rule should recompile only the updated source files
 - The clean, oclean, fclean, re rules should never fail
 - You are not allowed to have a list of all the .o files
-```
+
+```sh
 julien@ubuntu:~/holberton/curriculum_by_julien/holbertonschool-low_level_programming/0x1C. Makefiles$ ls -1
 0-Makefile
 1-Makefile
@@ -175,8 +186,10 @@ gcc main.o holberton.o -o holberton
 julien@ubuntu:~/0x1C. Makefiles$ 
 ```
 
-4. A complete Makefile mandatory
-File: 4-Makefile
+**4. A complete Makefile**
+
+File: [4-Makefile](4-Makefile/)
+
 Requirements:
 
 - name of the executable: holberton
@@ -197,7 +210,8 @@ Requirements:
 - The clean, oclean, fclean, re rules should never fail
 
 - You are not allowed to have a list of all the .o files
-```
+
+```sh
 julien@ubuntu:~/0x1C. Makefiles$ make all -f 4-Makefile
 gcc -Wall -Werror -Wextra -pedantic   -c -o main.o main.c
 gcc -Wall -Werror -Wextra -pedantic   -c -o holberton.o holberton.c
@@ -205,9 +219,10 @@ gcc main.o holberton.o -o holberton
 julien@ubuntu:~/0x1C. Makefiles$ 
 ```
 
+**5. Island Perimeter**
 
-5. Island Perimeter mandatory
-File: 5-island_perimeter.py
+File: [5-island_perimeter.py](5-island_perimeter.py/)
+
 Technical interview preparation:
 
 - You are not allowed to google anything
@@ -228,7 +243,8 @@ Requirements:
 - First line contains #!/usr/bin/python3
 - You are not allowed to import any module
 - Module and function must be documented
-```
+
+```sh
 guillaume@ubuntu:~/0x1C$ cat 5-main.py
 #!/usr/bin/python3
 """
@@ -252,9 +268,9 @@ guillaume@ubuntu:~/0x1C$ ./5-main.py
 guillaume@ubuntu:~/0x1C$ 
 ```
 
+**6. make -f 100-Makefile**
 
-6. make -f 100-Makefile #advanced
-File: 100-Makefile
+File: [100-Makefile](100-Makefile/)
 
 Requirements:
 
