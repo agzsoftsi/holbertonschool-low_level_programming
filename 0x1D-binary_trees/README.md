@@ -1,22 +1,22 @@
-﻿# 0x1D. C - Binary trees
+﻿![](Top.png)
 
 ## Requirements
 
 ### General
 
-- Allowed editors: vi, vim, emacs
-- All your files will be compiled on Ubuntu 14.04 LTS
-- Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project, is mandatory
-- Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-- You are not allowed to use global variables
-- No more than 5 functions per file
-- You are allowed to use the standard library
-- In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-- The prototypes of all your functions should be included in your header file called binary_trees.h
-- Don’t forget to push your header file
-- All your header files should be include guarded
+> - Allowed editors: vi, vim, emacs
+> - All your files will be compiled on Ubuntu 14.04 LTS
+> - Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+> - All your files should end with a new line
+> - A README.md file, at the root of the folder of the project, is mandatory
+> - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+> - You are not allowed to use global variables
+> - No more than 5 functions per file
+> - You are allowed to use the standard library
+> - In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+> - The prototypes of all your functions should be included in your header file called binary_trees.h
+> - Don’t forget to push your header file
+> - All your header files should be include guarded
 
 
 ### Data structures
@@ -24,7 +24,8 @@
 Please use the following data structures and types for binary trees. Don’t forget to include them in your header file.
 
 - Basic Binary Tree
-```
+
+```sh
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -45,17 +46,20 @@ typedef struct binary_tree_s binary_tree_t;
 ```
 
 - Binary Search Tree
-```
+
+```ssh
 typedef struct binary_tree_s bst_t;
 ```
 
 - AVL Tree
-```
+
+```sh
 typedef struct binary_tree_s avl_t;
 ```
 
 - Max Binary Heap
-```
+
+```sh
 typedef struct binary_tree_s heap_t;
 ```
 
@@ -70,7 +74,9 @@ This function is used only for visualization purposes. You don’t have to push 
 
 # TASKS
 
-0. New node mandatory - [0-binary_tree_node.c](0-binary_tree_node.c/)
+**0. New node**
+
+File: [0-binary_tree_node.c](0-binary_tree_node.c/)
 
 Write a function that creates a binary tree node
 
@@ -80,7 +86,7 @@ Write a function that creates a binary tree node
 - When created, a node does not have any child
 - Your function must return a pointer to the new node, or NULL on failure
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 0-main.c 
 #include <stdlib.h>
 #include "binary_trees.h"
@@ -116,7 +122,9 @@ alex@/tmp/binary_trees$
 ```
 
 
-1. Insert left mandatory - [1-binary_tree_insert_left.c](1-binary_tree_insert_left.c/)
+**1. Insert left**
+
+File: [1-binary_tree_insert_left.c](1-binary_tree_insert_left.c/)
 
 Write a function that inserts a node as the left-child of another node
 
@@ -125,7 +133,8 @@ Write a function that inserts a node as the left-child of another node
 - And value is the value to store in the new node
 - Your function must return a pointer to the created node, or NULL on failure or if parent is NULL
 - If parent already has a left-child, the new node must take its place, and the old left-child must be set as the left-child of the new node.
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 1-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -162,7 +171,9 @@ alex@/tmp/binary_trees$
 ```
 
 
-2. Insert right mandatory - [2-binary_tree_insert_right.c](2-binary_tree_insert_right.c/)
+**2. Insert right**
+
+File: [2-binary_tree_insert_right.c](2-binary_tree_insert_right.c/)
 
 Write a function that inserts a node as the right-child of another node
 
@@ -171,7 +182,8 @@ Write a function that inserts a node as the right-child of another node
 - And value is the value to store in the new node
 - Your function must return a pointer to the created node, or NULL on failure or if parent is NULL
 - If parent already has a right-child, the new node must take its place, and the old right-child must be set as the right-child of the new node.
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 2-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -208,7 +220,9 @@ alex@/tmp/binary_trees$
 ```
 
 
-3. Delete mandatory - [3-binary_tree_delete.c](3-binary_tree_delete.c/)
+**3. Delete**
+
+File: [3-binary_tree_delete.c](3-binary_tree_delete.c/)
 
 Write a function that deletes an entire binary tree
 
@@ -216,7 +230,7 @@ Write a function that deletes an entire binary tree
 - Where tree is a pointer to the root node of the tree to delete
 - If tree is NULL, do nothing
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 3-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -262,16 +276,18 @@ alex@/tmp/binary_trees$ valgrind ./3-del
 alex@/tmp/binary_trees$
 ```
 
+**4. Is leaf**
 
-4. Is leaf mandatory
+File: [4-binary_tree_is_leaf.c](4-binary_tree_is_leaf.c/)
 
-Write a function that checks if a node is a leaf - [4-binary_tree_is_leaf.c](4-binary_tree_is_leaf.c/)
+Write a function that checks if a node is a leaf
 
 - Prototype: int binary_tree_is_leaf(const binary_tree_t *node);
 - Where node is a pointer to the node to check
 - Your function must return 1 if node is a leaf, otherwise 0
 - If node is NULL, return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 4-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -313,8 +329,9 @@ Is 402 a leaf: 1
 alex@/tmp/binary_trees$
 ```
 
+**5. Is root**
 
-5. Is root mandatory - [5-binary_tree_is_root.c](5-binary_tree_is_root.c/)
+File: [5-binary_tree_is_root.c](5-binary_tree_is_root.c/)
 
 Write a function that checks if a given node is a root
 
@@ -323,7 +340,7 @@ Write a function that checks if a given node is a root
 - Your function must return 1 if node is a root, otherwise 0
 - If node is NULL, return 0
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 5-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -365,8 +382,9 @@ Is 402 a root: 0
 alex@/tmp/binary_trees$
 ```
 
+**6. Pre-order traversal**
 
-6. Pre-order traversal mandatory - [6-binary_tree_preorder.c](6-binary_tree_preorder.c/)
+File: [6-binary_tree_preorder.c](6-binary_tree_preorder.c/)
 
 Write a function that goes through a binary tree using pre-order traversal 
 
@@ -375,7 +393,7 @@ Write a function that goes through a binary tree using pre-order traversal
 - And func is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
 - If tree or func is NULL, do nothing
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 6-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -427,8 +445,9 @@ alex@/tmp/binary_trees$ ./6-pre
 alex@/tmp/binary_trees$
 ```
 
+**7. In-order traversal**
 
-7. In-order traversal mandatory - [7-binary_tree_inorder.c](7-binary_tree_inorder.c/)
+File: [7-binary_tree_inorder.c](7-binary_tree_inorder.c/)
 
 Write a function that goes through a binary tree using in-order traversal
 
@@ -436,7 +455,8 @@ Write a function that goes through a binary tree using in-order traversal
 - Where tree is a pointer to the root node of the tree to traverse
 - And func is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
 - If tree or func is NULL, do nothing
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 7-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -488,7 +508,9 @@ alex@/tmp/binary_trees$ ./7-in
 alex@/tmp/binary_trees$
 ```
 
-8. Post-order traversal mandatory - [8-binary_tree_postorder.c](8-binary_tree_postorder.c/)
+**8. Post-order traversal**
+
+File: [8-binary_tree_postorder.c](8-binary_tree_postorder.c/)
 
 - Write a function that goes through a binary tree using post-order traversal
 
@@ -497,7 +519,7 @@ alex@/tmp/binary_trees$
 - And func is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
 - If tree or func is NULL, do nothing
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 8-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -514,7 +536,9 @@ void print_num(int n)
 }
 
 
-9. Height mandatory - [9-binary_tree_height.c](9-binary_tree_height.c/)
+**9. Height**
+
+File: [9-binary_tree_height.c](9-binary_tree_height.c/)
 
 Write a function that measures the height of a binary tree
 
@@ -522,7 +546,7 @@ Write a function that measures the height of a binary tree
 - Where tree is a pointer to the root node of the tree to measure the height.
 - If tree is NULL, your function must return 0
 
-```
+```sh
 alex@/tmp/binary_trees$ cat 9-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -563,6 +587,8 @@ Height from 128: 1
 Height from 54: 0
 alex@/tmp/binary_trees$
 ```
+
+```sh
 /**
  * main - Entry point
  *
@@ -599,15 +625,17 @@ alex@/tmp/binary_trees$ ./8-post
 alex@/tmp/binary_trees$
 ```
 
+**10. Depth**
 
-10. Depth mandatory - [10-binary_tree_depth.c](10-binary_tree_depth.c/)
+File: [10-binary_tree_depth.c](10-binary_tree_depth.c/)
 
 Write a function that measures the depth of a node in a binary tree
 
 - Prototype: size_t binary_tree_depth(const binary_tree_t *tree);
 - Where tree is a pointer to the node to measure the depth
 - If tree is NULL, your function must return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 10-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -649,15 +677,17 @@ Depth of 54: 2
 alex@/tmp/binary_trees$
 ```
 
+**11. Size**
 
-11. Size mandatory - [11-binary_tree_size.c](11-binary_tree_size.c/)
+File: [11-binary_tree_size.c](11-binary_tree_size.c/)
 
 Write a function that measures the size of a binary tree
 
 - Prototype: size_t binary_tree_size(const binary_tree_t *tree);
 - Where tree is a pointer to the root node of the tree to measure the size
 - If tree is NULL, the function must return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 11-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -699,8 +729,9 @@ Size of 54: 1
 alex@/tmp/binary_trees$
 ```
 
+**12. Leaves**
 
-12. Leaves mandatory - [12-binary_tree_leaves.c](12-binary_tree_leaves.c/)
+File: [12-binary_tree_leaves.c](12-binary_tree_leaves.c/)
 
 Write a function that counts the leaves in a binary tree
 
@@ -708,7 +739,8 @@ Write a function that counts the leaves in a binary tree
 - Where tree is a pointer to the root node of the tree to count the number of leaves
 - If tree is NULL, the function must return 0
 - A NULL pointer is not a leaf
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 12-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -750,8 +782,9 @@ Leaves in 54: 1
 alex@/tmp/binary_trees$
 ```
 
+**13. Nodes**
 
-13. Nodes mandatory - [13-binary_tree_nodes.c](13-binary_tree_nodes.c/)
+File: [13-binary_tree_nodes.c](13-binary_tree_nodes.c/)
 
 Write a function that counts the nodes with at least 1 child in a binary tree
 
@@ -759,7 +792,8 @@ Write a function that counts the nodes with at least 1 child in a binary tree
 - Where tree is a pointer to the root node of the tree to count the number of nodes
 - If tree is NULL, the function must return 0
 - A NULL pointer is not a node
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 13-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -801,15 +835,17 @@ Nodes in 54: 0
 alex@/tmp/binary_trees$
 ```
 
+**14. Balance factor**
 
-14. Balance factor mandatory - [14-binary_tree_balance.c](14-binary_tree_balance.c/)
+File: [14-binary_tree_balance.c](14-binary_tree_balance.c/)
 
 Write a function that measures the balance factor of a binary tree
 
 - Prototype: int binary_tree_balance(const binary_tree_t *tree);
 - Where tree is a pointer to the root node of the tree to measure the balance factor
 - If tree is NULL, return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 14-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -857,14 +893,17 @@ Balance of 54: +0
 alex@/tmp/binary_trees$
 ```
 
-15. Is full mandatory - [15-binary_tree_is_full.c](15-binary_tree_is_full.c/)
+**15. Is full**
+
+File: [15-binary_tree_is_full.c](15-binary_tree_is_full.c/)
 
 Write a function that checks if a binary tree is full
 
 - Prototype: int binary_tree_is_full(const binary_tree_t *tree);
 - Where tree is a pointer to the root node of the tree to check
 - If tree is NULL, your function must return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 15-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -907,15 +946,17 @@ Is 128 full: 0
 alex@/tmp/binary_trees$
 ```
 
+**16. Is perfect**
 
-16. Is perfect mandatory - [16-binary_tree_is_perfect.c](16-binary_tree_is_perfect.c/)
+File: [16-binary_tree_is_perfect.c](16-binary_tree_is_perfect.c/)
 
 Write a function that checks if a binary tree is perfect
 
 - Prototype: int binary_tree_is_perfect(const binary_tree_t *tree);
 - Where tree is a pointer to the root node of the tree to check
 - If tree is NULL, your function must return 0
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 16-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -975,8 +1016,9 @@ Perfect: 0
 alex@/tmp/binary_trees$
 ```
 
+**17. Sibling**
 
-17. Sibling mandatory - [17-binary_tree_sibling.c](17-binary_tree_sibling.c/)
+File: [17-binary_tree_sibling.c](17-binary_tree_sibling.c/)
 
 Write a function that finds the sibling of a node
 
@@ -985,7 +1027,8 @@ Write a function that finds the sibling of a node
 - Your function must return a pointer to the sibling node
 - If node is NULL or the parent is NULL, return NULL
 - If node has no sibling, return NULL
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 17-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1035,7 +1078,9 @@ Sibling of 98: (nil)
 alex@/tmp/binary_trees$
 ```
 
-18. Uncle mandatory - [18-binary_tree_uncle.c](18-binary_tree_uncle.c/)
+**18. Uncle**
+
+File: [18-binary_tree_uncle.c](18-binary_tree_uncle.c/)
 
 Write a function that finds the uncle of a node
 
@@ -1044,7 +1089,8 @@ Write a function that finds the uncle of a node
 - Your function must return a pointer to the uncle node
 - If node is NULL, return NULL
 - If node has no uncle, return NULL
-```
+
+```sh
 alex@/tmp/binary_trees$ cat 18-main.c
 #include <stdlib.h>
 #include <stdio.h>
