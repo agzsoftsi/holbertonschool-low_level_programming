@@ -59,6 +59,10 @@ CISHELL v1.0 is a basic UNIX command interpreter, that read, interprets, and exe
 > - wait4 (man 2 wait4)
 > - write (man 2 write)
 
+### Man Page
+
+[Simple Shell Man Page](man_1_simple_shell/)
+
 ### Compilation
 
 Your shell will be compiled this way:
